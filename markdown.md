@@ -26,26 +26,42 @@ Two alternatives for H1 and H2 are:
 Formatting | Example
 ----------- | --------
 `**bold**, __bold__` | **bold**, __bold__
-*emph*, _emph_ | *emph*, _emph_
+`*emph*, _emph_` | *emph*, _emph_
 `~~strikethrough~~` | ~~strikethrough~~
 
 
-#### Syntax Highlighting
+#### Highlighting
 
-Inline `syntax` highlighting with single back-ticks.
+Inline `syntax` highlighting uses single back-ticks.
+
+Blocks of code use three back-ticks, or are indented with 4 spaces. A language specification might be supported, as for example for python:
+
 
     ```python
     if a == b:
         return c
     ```
 
-#### Misc
+```python
+if a == b:
+    return c
+```
 
-Blockquotes, with "> "
+Blockquote paragraphs start with "> ", as e.g. in `> Testing a blockquote.`
 
 > Testing a blockquote.
 
-Horizontal rules are built with at least three "*", or "-", or "_":
+#### Misc
+
+Ordered and unordered lists are created with numbers, and `*, -, +`,
+respectively. The indentation allows a hierarchical structure.
+
+Links are built in the form of `[visible description](link)`. One can
+link to websites, internet, and references that are provided
+independently in the form of `[ref-name]: link`.
+
+
+Horizontal rules are built with at least three `***`, or `---`, or `___`:
 
 ***
 _________________________________________________
