@@ -1,6 +1,9 @@
-# org-mode Syntax Cheatsheet
+## org-mode Compact Formatting Syntax Cheatsheet
 
-## Emphasis and monospace
+For more detailed information, see the for instance the
+[Markup for rich export](http://orgmode.org/manual/Markup.html)
+section of the org-mode manual.
+
 
 #### Emphasis
 
@@ -10,15 +13,15 @@ must, `‘+strike-through+’`.
 Formatting | Example
 ----------- | --------
 `*bold*` | **bold**
-`/italic/` | /italic/
-`_underlined_` | _underlined_
+`/italic/` | *italic*
+`_underlined_` | underlined
 `=verbatim=` | `verbatim`
 `~code~` | `code`
 `‘+strike-through+’` | ~~strike-through~~
 
 
 
-## Literal examples
+#### Literal examples
 - Extended example:
 
     ```
@@ -30,7 +33,7 @@ Formatting | Example
 - Small example (colon ":" followed by a whitespace):
 
   Here is an example
-     : Some example from a text file.
+     `: Some example from a text file.`
 
 - Language specific source code:
 
