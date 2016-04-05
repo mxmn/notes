@@ -19,8 +19,6 @@ Two alternatives for H1 and H2 are:
     --------
 
 
-
-
 #### Emphasis
 
 Formatting | Example
@@ -28,6 +26,7 @@ Formatting | Example
 `**bold**, __bold__` | **bold**, __bold__
 `*emph*, _emph_` | *emph*, _emph_
 `~~strikethrough~~` | ~~strikethrough~~
+``monospace`` | `monospace`
 
 
 #### Highlighting
@@ -57,8 +56,8 @@ Ordered and unordered lists are created with numbers, and `*, -, +`,
 respectively. The indentation allows a hierarchical structure.
 
 Links are built in the form of `[visible description](link)`. One can
-link to websites, internet, and references that are provided
-independently in the form of `[ref-name]: link`.
+link to websites, files, and reference labels.  Reference labels are
+defines separately in the form of `[ref-name]: link`.
 
 
 Horizontal rules are built with at least three `***`, or `---`, or `___`:
