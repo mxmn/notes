@@ -26,7 +26,7 @@ Formatting | Example
 `**bold**, __bold__` | **bold**, __bold__
 `*emph*, _emph_` | *emph*, _emph_
 `~~strikethrough~~` | ~~strikethrough~~
-``monospace`` | `monospace`
+```monospace``` | `monospace`
 
 
 #### Highlighting
@@ -37,13 +37,15 @@ Blocks of code use three back-ticks, or are indented with 4 spaces. A language s
 
 
     ```python
-    if a == b:
-        return c
+    def function(a, b=0):
+        if a == b:
+            return c
     ```
 
 ```python
-if a == b:
-    return c
+def function(a, b, c=0):
+    if a == b:
+        return c
 ```
 
 Blockquote paragraphs start with "> ", as e.g. in `> Testing a blockquote.`
