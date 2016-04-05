@@ -1,4 +1,4 @@
-## org-mode Compact Formatting Syntax Cheatsheet
+## org-mode Compact Markup Formatting Cheatsheet
 
 For more detailed information, see the for instance the
 [Markup for rich export](http://orgmode.org/manual/Markup.html)
