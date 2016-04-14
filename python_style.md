@@ -1,6 +1,6 @@
 # Python Style
 
-See for
+See the
 [Best of the Best Practices](https://gist.github.com/sloria/7001839)
 (BOBP) Guide for Python that presents a great summary of coding
 practices. As well, don't forget about The Zen of Python
