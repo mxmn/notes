@@ -26,7 +26,7 @@ Formatting | Example
 `**bold**, __bold__` | **bold**, __bold__
 `*emph*, _emph_` | *emph*, _emph_
 `~~strikethrough~~` | ~~strikethrough~~
-` monospace ` | `monospace`
+``monospace  | `monospace` (uses the _backtick_ (_grave accent_))
 
 
 #### Highlighting
