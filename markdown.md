@@ -21,12 +21,12 @@ Two alternatives for H1 and H2 are:
 
 #### Emphasis
 
-Formatting | Example
------------ | --------
+Formatting           | Example
+---------------------|------------------------------------
 `**bold**, __bold__` | **bold**, __bold__
-`*emph*, _emph_` | *emph*, _emph_
-`~~strikethrough~~` | ~~strikethrough~~
-``monospace  | `monospace` (uses the _backtick_ (_grave accent_))
+`*emph*, _emph_`     | *emph*, _emph_
+`~~strikethrough~~`  | ~~strikethrough~~
+'monospace'  (with _backtick_; _grave accent_) | `monospace`
 
 
 #### Highlighting
