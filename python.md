@@ -1,13 +1,13 @@
 # Python Notes
-Notes in flux: interesting tricks and tipps worth knowing/learning.
+Notes in flux: interesting tricks and tips worth knowing/learning.
 
 ### Useful Packages
 
 - [tqdm](https://pypi.python.org/pypi/tqdm) - A Fast, Extensible Progress Meter
 ```python
     from tqdm import tqdm
-        for i in tqdm(range(9)):
-    ...
+    for i in tqdm(range(9)):
+        ...
 ```
 
 

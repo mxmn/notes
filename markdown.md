@@ -31,7 +31,7 @@ Formatting           | Example
 
 #### Highlighting
 
-Inline `syntax` highlighting uses single back-ticks.
+Inline `monospace syntax` highlighting uses single back-ticks.
 
 Blocks of code use three back-ticks, or are indented with 4 spaces. A language specification might be supported, as for example for python:
 
