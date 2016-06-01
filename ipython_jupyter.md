@@ -25,7 +25,7 @@ import matplotlib.pyplot as plt
 - add line numbers and line wrapping. Add this code snippet to
   `~/.jupyter/custom.custom.js`:
 
-```python
+```javascript
 define([
     'base/js/namespace',
     'base/js/events'],
