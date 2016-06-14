@@ -34,3 +34,20 @@ Command      | Description
 `whatis arg`  | prints the type of the argument `args`
 `alias [name [command]]` | creates an alias
 `q(uit)`      | quit pdb
+
+
+### Python 2 and 3 Compatibility
+
+First, add the future import to Py2 files:
+```python
+from __future__ import absolute_import, division, print_function
+```
+optionally, one could add the `unicode_laterals` as well, but this is not advisable in the general sense (see [link](http://python-future.org/unicode_literals.html#unicode-literals)).
+
+
+Explicit imports of Py3 builtins into Py2:
+```python
+from builtins import (ascii, bytes, chr, dict, filter, hex, input,
+                      int, map, next, oct, open, pow, range, round,
+                      str, super, zip)
+```
