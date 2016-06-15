@@ -1,6 +1,22 @@
 # Python Notes
 Notes in flux: interesting tricks and tips worth knowing/learning.
 
+### Python / IPython Code Snippets
+- simple logging setup
+```python
+import logging
+logging.basicConfig(filename=log_file, level=logging.INFO,
+                    format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
+logging.info("info message")
+```
+- text progress bar
+```python
+    from tqdm import tqdm
+    for i in tqdm(range(9)):
+        ...
+```
+
+
 ### Useful Packages
 
 - [tqdm](https://pypi.python.org/pypi/tqdm) - A Fast, Extensible Progress Meter
