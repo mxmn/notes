@@ -16,13 +16,9 @@ for i in tqdm(range(9)):
     ...
 ```
 
-- command line arguments
+- command line arguments are available in the list `sys.argv` with `sys.argv[0]` being the name of called script
 ```python
 print sys.argv
-```
-generates the example output (where sys.argv[0] is the called program name):
-```
-['example.py', 'arg1', 'arg2', '-i=input']
 ```
 
 ### Useful Packages
