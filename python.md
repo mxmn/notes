@@ -11,11 +11,19 @@ logging.info("info message")
 ```
 - text progress bar
 ```python
-    from tqdm import tqdm
-    for i in tqdm(range(9)):
-        ...
+from tqdm import tqdm
+for i in tqdm(range(9)):
+    ...
 ```
 
+- command line arguments
+```python
+print sys.argv
+```
+generates the example output (where sys.argv[0] is the called program name):
+```
+['example.py', 'arg1', 'arg2', '-i=input']
+```
 
 ### Useful Packages
 
