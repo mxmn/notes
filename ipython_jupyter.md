@@ -17,7 +17,8 @@ import matplotlib.pyplot as plt
 
 
 ### Useful Magic commands
--
+- `%debug` will switch to `ipdb` if called right after an error. Alternatively, it allows to setup breakpoints before executing a command.
+- `%pdb` will enable automatic switch to `ipdb` in case an error occurs in the program.
 
 ### Jupyter Snippets
 

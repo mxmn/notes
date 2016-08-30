@@ -50,8 +50,8 @@ Blockquote paragraphs start with "> ", as e.g. in `> Testing a blockquote.`
 
 #### Links
 
-Links are built in the form of `[visible description](link)` (to be
-not confused with `org`'s links: `[[link][visible description]]`).
+Links are built in the form of `[visible description](link)` (not to
+be confused with `org`'s links: `[[link][visible description]]`).
 
 One can link to websites, files, and reference labels.  Reference
 labels are defines separately in the form of `[ref-name]: link`.
