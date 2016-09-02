@@ -27,7 +27,14 @@ import matplotlib.pyplot as plt
 from __future__ import absolute_import, division, print_function
 
 import os, sys
-import json
+# import json
+# from collections import Counter, defaultdict
+
+from tqdm import tnrange, tqdm_notebook
+# usage: for x in tqdm_notebook(some_iterable, "1th loop"):
+#            for y in tqdm_notebook(another_iterable, "2nd loop"): do stuff
+#    or: for i in tnrange(100): do stuf
+# import pandas as pd
 
 %pylab inline
 plt.rcParams['figure.figsize'] = (10.0, 8.0) # set default size of plots
