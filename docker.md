@@ -23,35 +23,21 @@ Option | Description
 
 ##### Other Image Interaction Commands
 
-`docker stop app`
-
-`docker kill app`
-
-`docker ps`
-
-`docker network ls`
-
-`docker network create --subnet 10.1.0.0/24 --gateway 10.1.0.1 -d overlay mynet`
-
-Delete container `app`:
-    docker rm app
-
-Create a new bash process inside the container and connect it to the terminal:
-
-`docker exec -it app bash`
-
-Print the last 42 lines of a container's logs:
-
-    docker logs --tail 42 app
-
-List all images that are locally stored within the Docker engine:
-
-    docker images
+Command | Description
+--------|-----------
+`docker stop app` |
+`docker kill app` |
+`docker ps`       |
+`docker network ls` |
+`docker rm app` | Delete container `app`
+`docker exec -it app bash` | Create a new bash process inside the container and connect it to the terminal
+`docker logs --tail 42 app` | Print the last 42 lines of a container's logs
+`docker images` | List all images that are locally stored within the Docker engine
 
 
 #### Some sample commands
 
-SSH tunnel to run docker image on a remote host (tunneling ):
+SSH tunnel to run docker image on a remote host:
 
     ssh -tL 7777:localhost:9999 remote-hostname docker run -it --rm -p 127.0.0.1:9999:8888 my-docker-image
 
@@ -62,3 +48,7 @@ Related/tunneled web page on local machine:
 Launching a bash on the remote docker container with a volume mount:
 
     docker run -it --name=app -v /home/user/progs:/home/user/progs my-docker-image /bin/bash
+
+Create an overlay network and specify a subnet:
+
+    docker network create --subnet 10.1.0.0/24 --gateway 10.1.0.1 -d overlay mynet`
