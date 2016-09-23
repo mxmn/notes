@@ -12,6 +12,7 @@ A simple version of running/launching a docker container:
 
 ###### Run Options
 
+Option | Description
 ----------|----------
 `-it` | connect container to terminal & stdout
 `-d`  | run in deamon mode
@@ -33,7 +34,7 @@ A simple version of running/launching a docker container:
 `docker network create --subnet 10.1.0.0/24 --gateway 10.1.0.1 -d overlay mynet`
 
 Delete container `app`:
-`docker rm app`
+    docker rm app
 
 Create a new bash process inside the container and connect it to the terminal:
 
