@@ -1,13 +1,32 @@
 * RNN
+
 ** Definitions
 - =batch_size= is the number of parallel batches
 - =state_size= is the number of elements in the states vector of an RNN
-- =n_steps= is the number of truncated backprop steps in an RNN
+- =num_steps= is the number of truncated backprop steps in an RNN
   - should be bigger by a good margin than the maximal time interval to remember
-- =n_epochs= is the number of epochs
-- =batch_partition_length= = =n_elem= / =batch_size= : length of a batch partition
+- =num_epochs= is the number of epochs
+- =epoch_size= is the number of steps in one epoch (=epoch_size = batch_partition_length / num_steps=)
+- =num_elems= is the number of elements in one epoch ( =num_elems = epoch_size * batch_size * num_steps= )
+- =batch_partition_length = num_elems / batch_size= : length of a batch partition
 
 
-* COMMENT
+## Models - Setup
+- LSTM store their state n a 2-tuple
+- =dynamic_rnn= produces =rnn_outputs= with shape =[batch_size, num_steps, state_size]=
+
+** Resources
+- http://r2rt.com/
+  - http://r2rt.com/recurrent-neural-networks-in-tensorflow-i.html
+  - http://r2rt.com/recurrent-neural-networks-in-tensorflow-ii.html
+  - [[http://r2rt.com/written-memories-understanding-deriving-and-extending-the-lstm.html][Written Memories: Understanding, Deriving and Extending the LSTM]]
+  - http://r2rt.com/styles-of-truncated-backpropagation.html
+  - http://r2rt.com/implementing-batch-normalization-in-tensorflow.html
+  - [[http://r2rt.com/preliminary-note-on-the-complexity-of-a-neural-network.html][Preliminary Note on the Complexity of a Neural Network]]
+- http://www.wildml.com/
+  - [[http://www.wildml.com/2016/08/rnns-in-tensorflow-a-practical-guide-and-undocumented-features/][RNNS IN TENSORFLOW, A PRACTICAL GUIDE AND UNDOCUMENTED FEATURES]]
+- https://danijar.com/
+  - https://danijar.com/variable-sequence-lengths-in-tensorflow/
+
 #+TITLE: Tensorflow Notes
 #+DATE:
