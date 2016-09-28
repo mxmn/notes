@@ -11,9 +11,21 @@
 - =batch_partition_length = num_elems / batch_size= : length of a batch partition
 
 
-## Models - Setup
+** Models - Setup
 - LSTM store their state n a 2-tuple
 - =dynamic_rnn= produces =rnn_outputs= with shape =[batch_size, num_steps, state_size]=
+
+*** Variable Length Sequences
+- RNN functions expect tensors of shape =[batch_size, seq_length]=
+  where =seq_length= is the lenght of the sequences in the batch.
+  - use =dynamic_pad=True= when calling =tf.train.batch= to pad the
+    batch automatically with zeros if the sequences are not of the
+    same length.
+- provide =sequence_length= keyword to =dynamic_rnn=
+- the return of =dynamic_rnn= is a tuple of =(outputs, state)=
+  - =outputs= is a tensor of shape =[batch_size, seq_length, num_units]=
+  - =state= is a tuple of two tensors (=[batch_size, num_units]=)
+
 
 ** Resources
 - http://r2rt.com/
@@ -24,7 +36,7 @@
   - http://r2rt.com/implementing-batch-normalization-in-tensorflow.html
   - [[http://r2rt.com/preliminary-note-on-the-complexity-of-a-neural-network.html][Preliminary Note on the Complexity of a Neural Network]]
 - http://www.wildml.com/
-  - [[http://www.wildml.com/2016/08/rnns-in-tensorflow-a-practical-guide-and-undocumented-features/][RNNS IN TENSORFLOW, A PRACTICAL GUIDE AND UNDOCUMENTED FEATURES]]
+  - [[http://www.wildml.com/2016/08/rnns-in-tensorflow-a-practical-guide-and-undocumented-features/][RNNs in Tensorflow, a Practical Guide and Undocumented Features]]
 - https://danijar.com/
   - https://danijar.com/variable-sequence-lengths-in-tensorflow/
 
