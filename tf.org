@@ -1,0 +1,13 @@
+* RNN
+** Definitions
+- =batch_size= is the number of parallel batches
+- =state_size= is the number of elements in the states vector of an RNN
+- =n_steps= is the number of truncated backprop steps in an RNN
+  - should be bigger by a good margin than the maximal time interval to remember
+- =n_epochs= is the number of epochs
+- =batch_partition_length= = =n_elem= / =batch_size= : length of a batch partition
+
+
+* COMMENT
+#+TITLE: Tensorflow Notes
+#+DATE:
