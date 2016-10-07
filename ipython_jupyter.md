@@ -15,14 +15,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 ```
 
-
 ### Useful Magic commands
 - `%debug` will switch to `ipdb` if called right after an error. Alternatively, it allows to setup breakpoints before executing a command.
 - `%pdb` will enable automatic switch to `ipdb` in case an error occurs in the program.
 
 ### Jupyter Snippets
 
-#### Standard Configuration
+##### Standard Configuration
 ```python
 from __future__ import absolute_import, division, print_function
 
@@ -65,3 +64,35 @@ define([
     }
 );
 ```
+
+### Jupyter notebook extensions
+The [nbextensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensionsa)
+can be installed following the guides on the
+[site](https://github.com/ipython-contrib/jupyter_contrib_nbextensions):
+
+```
+conda install -c conda-forge jupyter_contrib_nbextensions
+```
+
+To activate a specific extension, one could either use the
+nbextensions configurator (below), or one could pre-activate the
+extensions prior to starting jupyter. E.g. to activate the table of
+contents, use
+
+```
+jupyter nbextension enable toc2/main
+jupyter-notebook
+```
+
+To explore and to enable/disable other extensions, use the
+nbextensions configurator. With conda it can be installed via:
+
+```
+conda install -c conda-forge jupyter_nbextensions_configurator
+```
+
+Then (after restarting the notebook server), the configurator will be accessible under
+`{base_url}/nbextensions`, as e.g.
+[http://localhost:8889/nbextensions](http://localhost:8889/nbextensions)
+
+- when time will be available, explore further extensions.
