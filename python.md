@@ -30,6 +30,16 @@ print sys.argv
         ...
 ```
 
+#### Numba
+For example, use `jit` decorator to speed up loop functions (e.g. by a factor of 200):
+
+```python
+from numba import jit
+@jit
+def jit_simulate():
+    while True:
+        ...
+```
 
 ### pdb Debugger
 Command      | Description
