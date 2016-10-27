@@ -41,6 +41,16 @@ def jit_simulate():
         ...
 ```
 
+#### Speed & Memory
+- Lookups in lists are *O(n)*, in dicts they are amortized *O(1)* (in
+  dependence of the number of elements in the dict).
+  * use dicts for lookup if number of elements is *reasonable*.
+  * an alternative is to use a sorted list and then to use a binary
+    search, which will be *O(log(n))*. (The sorting will be *O(n
+    log(n))*.)
+- Dicts and sets use hashing and therfore much more memory than needed
+  for the element objects only.
+
 ### pdb Debugger
 Command      | Description
 -------------|---------------------------------------------------------
