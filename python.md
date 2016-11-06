@@ -24,8 +24,7 @@ print sys.argv
 - file processing via streams/pipes, for instance to apply additional command line operations on the file, as e.g. unzip:
 ```python
 from subprocess import Popen, PIPE
-
-process = Popen(['zcat', '-f', gz_file], stdout = PIPE, stderr = PIPE)
+process = Popen(['zcat', '-f', gz_file], stdout=PIPE, stderr=PIPE)
 stdout, stderr = process
 for line in stdout:
     pass
@@ -33,7 +32,7 @@ for line in stdout:
 or
 ```python
 from subprocess import Popen, PIPE
-input_stream = Popen(['zcat', '-f', gz_file], stdout = PIPE)
+input_stream = Popen(['zcat', '-f', gz_file], stdout=PIPE)
 for line in input_stream.stdout:
     pass
 ```
@@ -76,7 +75,7 @@ def jit_simulate():
         # find `len(lst)` as the index to insert, so check that first. Else, if the
         # item is in the list then it has to be at index bisect_left(lst, item)
         return (item <= lst[-1]) and (lst[bisect_left(lst, item)] == item)
-    ```
+```
 - Dicts and sets use hashing and therfore much more memory than needed
   for the element objects only.
 
