@@ -21,6 +21,26 @@ for i in tqdm(range(9)):
 print sys.argv
 ```
 
+- file processing via streams/pipes, for instance to apply additional command line operations on the file, as e.g. unzip:
+```python
+from subprocess import Popen, PIPE
+
+process = Popen(['zcat', '-f', gz_file], stdout = PIPE, stderr = PIPE)
+stdout, stderr = process
+for line in stdout:
+    pass
+```
+or
+```python
+from subprocess import Popen, PIPE
+input_stream = Popen(['zcat', '-f', gz_file], stdout = PIPE)
+for line in input_stream.stdout:
+    pass
+```
+
+- Note: `shell=True` is considered a security risk when used to process untrusted data. A clever attacker can modify the input to access arbitrary system commands. E.g. by inputting `filename.swf; rm -rf /` for the value of filename.
+
+
 ### Useful Packages
 
 - [tqdm](https://pypi.python.org/pypi/tqdm) - A Fast, Extensible Progress Meter
@@ -47,7 +67,16 @@ def jit_simulate():
   * use dicts for lookup if number of elements is *reasonable*.
   * an alternative is to use a sorted list and then to use a binary
     search, which will be *O(log(n))*. (The sorting will be *O(n
-    log(n))*.)
+    log(n))*.). One could use the *bisect* module for this:
+```python
+    from bisect import bisect_left
+    def bi_contains(lst, item):
+        """ efficient `item in lst` for sorted lists """
+        # if item is larger than the last its not in the list, but the bisect would
+        # find `len(lst)` as the index to insert, so check that first. Else, if the
+        # item is in the list then it has to be at index bisect_left(lst, item)
+        return (item <= lst[-1]) and (lst[bisect_left(lst, item)] == item)
+    ```
 - Dicts and sets use hashing and therfore much more memory than needed
   for the element objects only.
 
