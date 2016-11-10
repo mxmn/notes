@@ -35,7 +35,9 @@ from tqdm import tnrange, tqdm_notebook
 #            for y in tqdm_notebook(another_iterable, "2nd loop"): do stuff
 #    or: for i in tnrange(100): do stuf
 
-%pylab inline
+# --no-import-all prevents importing * from numpy and matplotlib
+%pylab inline --no-import-all
+
 plt.rcParams['figure.figsize'] = (10.0, 8.0) # set default size of plots
 #plt.rcParams['image.interpolation'] = 'nearest'
 #plt.rcParams['image.cmap'] = 'gray'
