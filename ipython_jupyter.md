@@ -29,6 +29,8 @@ import os, sys
 # import json
 # from collections import Counter, defaultdict
 # import pandas as pd
+# import seaborn # Importing seaborn automatically makes our plots look better
+# import matplotlib.pyplot as pyplt
 
 from tqdm import tnrange, tqdm_notebook
 # usage: for x in tqdm_notebook(some_iterable, "1th loop"):
