@@ -1,7 +1,7 @@
 # Python Notes
 Notes in flux: interesting tricks and tips worth knowing/learning.
 
-### Python / IPython Code Snippets
+## Python / IPython Code Snippets
 - simple logging setup
 ```python
 import logging
@@ -39,28 +39,13 @@ for line in input_stream.stdout:
 
 - Note: `shell=True` is considered a security risk when used to process untrusted data. A clever attacker can modify the input to access arbitrary system commands. E.g. by inputting `filename.swf; rm -rf /` for the value of filename.
 
+## Performance
+### Time Complexity
+- Link: python standard data structures
+[time complexity](https://wiki.python.org/moin/TimeComplexity).
+- Not about time complexity, but check these common efficient [external data structures](http://kmike.ru/python-data-structures/).
 
-### Useful Packages
-
-- [tqdm](https://pypi.python.org/pypi/tqdm) - A Fast, Extensible Progress Meter
-```python
-    from tqdm import tqdm
-    for i in tqdm(range(9)):
-        ...
-```
-
-#### Numba
-For example, use `jit` decorator to speed up loop functions (e.g. by a factor of 200):
-
-```python
-from numba import jit
-@jit
-def jit_simulate():
-    while True:
-        ...
-```
-
-#### Speed & Memory
+### Speed & Memory
 - Lookups in lists are *O(n)*, in dicts they are amortized *O(1)* (in
   dependence of the number of elements in the dict).
   * use dicts for lookup if number of elements is *reasonable*.
@@ -79,7 +64,28 @@ def jit_simulate():
 - Dicts and sets use hashing and therfore much more memory than needed
   for the element objects only.
 
-### pdb Debugger
+### Numba
+For example, use `jit` decorator to speed up loop functions (e.g. by a factor of 200):
+
+```python
+from numba import jit
+@jit
+def jit_simulate():
+    while True:
+        ...
+```
+
+## Useful Packages
+
+- [tqdm](https://pypi.python.org/pypi/tqdm) - A Fast, Extensible Progress Meter
+```python
+    from tqdm import tqdm
+    for i in tqdm(range(9)):
+        ...
+```
+- Numba - see section on Performance above.
+
+## pdb Debugger
 Command      | Description
 -------------|---------------------------------------------------------
 `h pdb`      | help on pdb
