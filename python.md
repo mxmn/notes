@@ -110,7 +110,7 @@ Command      | Description
 `q(uit)`      | quit pdb
 
 
-### Python 2 and 3 Compatibility
+## Python 2 and 3 Compatibility
 
 First, add the future import to Py2 files:
 ```python
