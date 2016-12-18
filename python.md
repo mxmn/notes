@@ -7,6 +7,7 @@ Notes in flux: interesting tricks and tips worth knowing/learning.
 import logging
 logging.basicConfig(filename=log_file, level=logging.INFO,
                     format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
+logging.getLogger().addHandler(logging.StreamHandler()) # to print on console as well (no timestamp)
 logging.info("info message")
 ```
 - text progress bar

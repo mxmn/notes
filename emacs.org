@@ -1,18 +1,24 @@
 * Usefuls to have
 - indent a region in org, or python, by a certain amount (n spaces)
-  - or, remove =n= spaces in from of a region
+  - or, remove =n= spaces at the beginning of a region
   - Solution:
     - =C-u C-x TAB= - indents by 4 spaces
     - =C-u <number> C-x TAB= - indents by <number> spaces
   - alternative:
     - =C-x TAB= - and then type left, right, or Shift-Left, Shift-Right
-
 - insert =#+BEGIN_EXAMPLE ..\n #+END_EXAMPLE= template into org
 - directory tree / project tree structure
   - https://www.emacswiki.org/emacs/NeoTree
   - http://emacs.stackexchange.com/questions/413/tree-based-directory-browser
   - http://stackoverflow.com/questions/843645/a-good-project-tree-browser-for-emacs
 
+* Interesting - to check out
+- a simple way to see the Emacs path (and to compare with shell path):
+  - =M-: (getenv "PATH")=
+  - where =M-:= asks for elisp command to be evaluated.
+- the [[https://github.com/realgud/realgud][RealGUD]] emacs debugger looks really good. Try it out. It might
+  even come close to the IDLWave IDL debugger. Can be used with =pdb=
+  and =ipdb=.
 
 * Currently Adapting
 
