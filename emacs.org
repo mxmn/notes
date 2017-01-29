@@ -27,12 +27,12 @@
 * Currently Adapting
 
 Enclosing highligted regions [[http://stackoverflow.com/questions/2951797/wrapping-selecting-text-in-enclosing-characters-in-emacs][link]]:
-|---------+-----------------------------|
-| =M-(=   | insert ( ) around region    |
-| =M-[=   | insert [ ] around region    |
-| =M-{=   | (insert { } around region)  |
-| =M-"=   | insert " " around region    |
-| =M-)=   | (delete matching whatevers) |
+|-------+-----------------------------|
+| =M-(= | insert ( ) around region    |
+| =M-[= | insert [ ] around region    |
+| =M-{= | (insert { } around region)  |
+| M-"   | insert " " around region    |
+| =M-)= | (delete matching whatevers) |
 
 
 Using the s-expression:
