@@ -7,6 +7,10 @@
   - alternative:
     - =C-x TAB= - and then type left, right, or Shift-Left, Shift-Right
 - insert =#+BEGIN_EXAMPLE ..\n #+END_EXAMPLE= template into org
+  - Solution:
+    - =<eTAB= - insert EXAMPLE
+    - =<sTAB= - insert SRC
+    - =<lTAB= - insert LaTeX
 - directory tree / project tree structure
   - https://www.emacswiki.org/emacs/NeoTree
   - http://emacs.stackexchange.com/questions/413/tree-based-directory-browser
@@ -22,11 +26,14 @@
 
 * Currently Adapting
 
-Undo-redo with undo-tree
-|----------------+----------------|
-| =C-/= or =C-_= | Undo           |
-| =C-?= or =M-_= | Redo           |
-| =C-x u=        | Open undo-tree |
+Enclosing highligted regions [[http://stackoverflow.com/questions/2951797/wrapping-selecting-text-in-enclosing-characters-in-emacs][link]]:
+|---------+-----------------------------|
+| =M-(=   | insert ( ) around region    |
+| =M-[=   | insert [ ] around region    |
+| =M-{=   | (insert { } around region)  |
+| =M-\""= | insert " " around region    |
+| =M-)=   | (delete matching whatevers) |
+
 
 Using the s-expression:
 |-------------+-------------------------------|
@@ -82,6 +89,12 @@ Other Editing Commands:
 | =C-u C-x TAB=       | Moves 4 spaces                                |
 | =C-u <num> C-x TAB= | Moves <num> spaces                            |
 
+
+Undo-redo with undo-tree
+|----------------+----------------|
+| =C-/= or =C-_= | Undo           |
+| =C-?= or =M-_= | Redo           |
+| =C-x u=        | Open undo-tree |
 
 And the /always present/ modes / commands:
 - occur
@@ -190,6 +203,24 @@ Commands after starting search:
 
 
 
+* org-mode
+** Easy Templates
+Type '<' followed by a template selector (below), followed by TAB.
+|---+-----------------------------------|
+| s | #+BEGIN_SRC ... #+END_SRC         |
+| e | #+BEGIN_EXAMPLE ... #+END_EXAMPLE |
+| q | #+BEGIN_QUOTE ... #+END_QUOTE     |
+| v | #+BEGIN_VERSE ... #+END_VERSE     |
+| c | #+BEGIN_CENTER ... #+END_CENTER   |
+| l | #+BEGIN_LaTeX ... #+END_LaTeX     |
+| L | #+LaTeX:                          |
+| h | #+BEGIN_HTML ... #+END_HTML       |
+| H | #+HTML:                           |
+| a | #+BEGIN_ASCII ... #+END_ASCII     |
+| A | #+ASCII:                          |
+| i | #+INDEX: line                     |
+| I | #+INCLUDE: line                   |
+Additional templates can be added by customizing =org-structure-template-alist=
 
 * Emacs Basic Commands and Functionality
 Things that I tend to forget after a while, and which are good to revisit from time to time.
