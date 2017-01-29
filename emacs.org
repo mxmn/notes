@@ -31,7 +31,7 @@ Enclosing highligted regions [[http://stackoverflow.com/questions/2951797/wrappi
 | =M-(=   | insert ( ) around region    |
 | =M-[=   | insert [ ] around region    |
 | =M-{=   | (insert { } around region)  |
-| =M-\""= | insert " " around region    |
+| =M-"=   | insert " " around region    |
 | =M-)=   | (delete matching whatevers) |
 
 
