@@ -22,6 +22,12 @@
 
 * Currently Adapting
 
+Undo-redo with undo-tree
+|----------------+----------------|
+| =C-/= or =C-_= | Undo           |
+| =C-?= or =M-_= | Redo           |
+| =C-x u=        | Open undo-tree |
+
 Using the s-expression:
 |-------------+-------------------------------|
 | =C-M-f=     | Move forward by s-expression  |

@@ -6,7 +6,7 @@ Notes in flux: interesting tricks and tips worth knowing/learning.
 ```python
 import logging
 logging.basicConfig(filename=log_file, level=logging.INFO,
-                    format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
+    format='%(asctime)s %(levelname)-7s %(message)s', datefmt="%Y-%m-%d %H:%M:%S")
 logging.getLogger().addHandler(logging.StreamHandler()) # to print on console as well (no timestamp)
 logging.info("info message")
 ```
