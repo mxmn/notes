@@ -334,6 +334,10 @@ mode when editing a file.
 
 
 
+* Emacs Configuration
+- When installing packages via package-install, if package is not
+  found by elpa/melpa, run =package-refresh-contents=.
+
 * COMMENT Configuration
 #+TITLE: Emacs Usage
 #+AUTHOR: mxn
