@@ -5,9 +5,10 @@ Notes in flux: interesting tricks and tips worth knowing/learning.
 - simple logging setup
 ```python
 import logging
+logging.getLogger().handlers = []  # to remove all previous handlers
 logging.basicConfig(filename=log_file, level=logging.INFO,
     format='%(asctime)s %(levelname)-7s %(message)s', datefmt="%Y-%m-%d %H:%M:%S")
-logging.getLogger().addHandler(logging.StreamHandler()) # to print on console as well (no timestamp)
+logging.getLogger().addHandler(logging.StreamHandler())  # to print on console as well (no timestamp)
 logging.info("info message")
 ```
 - text progress bar
